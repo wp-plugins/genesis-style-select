@@ -1,5 +1,4 @@
 === Plugin Name ===
-Genesis Style Select
 Contributors: Nick the Geek
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RGUXZDAKT7BDW
 Tags: agentpress, color, selector, genesis, genesiswp, studiopress, style, stylesheet,
@@ -7,7 +6,7 @@ Requires at least: 2.9
 Tested up to: 3.0rc1
 Stable tag: 0.6b
 
-
+Genesis Style Select
 
 == Description ==
 
