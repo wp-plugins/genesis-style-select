@@ -3,8 +3,8 @@ Contributors: Nick the Geek
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RGUXZDAKT7BDW
 Tags: agentpress, color, selector, genesis, genesiswp, studiopress, style, stylesheet,
 Requires at least: 2.9
-Tested up to: 3.0rc1
-Stable tag: 0.6b
+Tested up to: 3.0
+Stable tag: 0.7
 
 Permits users to quickly and easily change style sheets with the Genesis framework themes
 
@@ -27,7 +27,10 @@ This plugin requires the [Genesis Theme Framework](https://www.e-junkie.com/ecom
 
 == Change Log ==
 
-0.6.1b (6-9-2010 : current)
+0.7 (7-16-2010 : current)
+-added a test to prevent plugin from loading functions twice when a Child theme is activated that includes this function.
+
+0.6.1b (6-9-2010)
 -updated meta-box and list names
 -added description to meta-box describing how to use the plugin
 

@@ -3,7 +3,7 @@
 Plugin Name: Genesis Style Select
 Plugin URI: http://designsby.nickgeek.com/2010/06/13/genesis-style-select/
 Description: Genesis Style Select is allows users to select which style sheet they will use in any Genesis Child theme by StudioPress.
-Version: 0.6.1b
+Version: 0.7
 Author: Nick Croft
 Author URI: http://DesignsBy.NickGeek.com/
 */
@@ -34,13 +34,14 @@ function styleselect_activation_check() {
 // Add new box to the Genesis -> Theme Settings page
 add_action('genesis_init', 'ntg_add_style_settings_init');
 function NtG_add_style_settings_init() {
+if(function_exists(ntg_style_check_test)) {
     add_action('admin_menu', 'ntg_add_style_settings_box', 20);
+}
 }
 function ntg_add_style_settings_box() {
     global $_genesis_theme_settings_pagehook;
     add_meta_box('genesis-theme-settings-style', __('Style Select', 'genesis'), 'ntg_theme_settings_style_box', $_genesis_theme_settings_pagehook, 'column2', 'high');
 }
-
 function ntg_theme_settings_style_box() {
     // set the default selection (if empty)
     $style = genesis_get_option('style_selection') ? genesis_get_option('style_selection') : 'style.css';
@@ -70,6 +71,7 @@ function ntg_theme_settings_style_box() {
 <?php
 }
 
+if(!function_exists(genesis_style_check)) {
 // Checks if the style sheet is a Genesis style sheet
 function genesis_style_check($fileText, $char_list) {
 
@@ -82,6 +84,9 @@ function genesis_style_check($fileText, $char_list) {
 	        return false;
 	    }
 	    return true;
+}
+// the presence of this function means the genesis child theme is not using style select.
+function ntg_style_check_test(){}
 }
 
 // Changes the style sheet per the selection in the theme settings and loads style.css if selected style sheet is not available
