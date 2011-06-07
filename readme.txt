@@ -14,7 +14,7 @@ This plugin adds a new menu box to the Genesis theme settings. This menu box all
 
 This is useful for child themes that come with multiple style sheets, such as the Agent Press Child theme 1.0, or in a multisite environment using WPMU, or WP 3.0+ with networking enabled.  In such an environment each child theme could have multiple style sheets allowing multiple sites to use the child theme with significantly different appearances, while not affecting the other sites.
 
-This plugin requires the [Genesis Theme Framework](https://www.e-junkie.com/ecom/gb.php?ii=191863&c=ib&aff=109860&cl=10214)
+This plugin requires the [Genesis Theme Framework](http://www.studiopress.com/)
 
 == Installation ==
 
